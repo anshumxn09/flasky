@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body>
+   <p>About us page</p> 
+    <a href="{{ url_for("hello_world")}}">Click To Visit Home Page</a>
+    <ul>
+        {% for name in names %}
+            {% if name == "apple"%}
+                <h1>APPLE</h1>
+            {% else %}
+                <li>{{name}}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
+{% comment %} url_for contains the function name of the path {% endcomment %}
